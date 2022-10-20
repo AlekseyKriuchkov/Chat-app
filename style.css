@@ -21,7 +21,6 @@ html, body {
     overflow: hidden;
     font-family: 'Rubik', sans-serif;
     width: 400px;
-    padding-bottom: 100px;
 }
 
 .bg-top {
@@ -53,6 +52,7 @@ html, body {
     overflow: hidden;
     width: 250px;
     height: 500px;
+    min-width: 250px;
     margin: 45px 0;
     border: 7px solid white;
     border-radius: 25px;
@@ -209,19 +209,18 @@ html, body {
     padding: 6px 10px;
 }
 
-.input {
-    
-}
+
 
 .input-message {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 10px;
+    padding: 5px 0;
+    padding-left: 10px;
     font-size: 0.8em;
     color: rgb(181, 177, 177);
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 10px 10px;
 }
 
@@ -229,6 +228,7 @@ html, body {
     content: "";
     width: 30px;
     height: 30px;
+    margin-right: 5px;
     border-radius: 50%;
     background: hsl(271, 36%, 24%);
 }
@@ -255,4 +255,32 @@ html, body {
     text-align: center;
     color: hsl(270, 7%, 64%);
     margin: 20px 45px;
+}
+
+@media (min-width: 401px) {
+    .main {
+        width: 100%;
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .bg-top {
+        left: -50px;
+        width: 30%;
+        height: 80%;
+        border-radius: 0 0 900px 900px;
+    }
+    
+    .bg-bottom {
+        right: -50px;
+        width: 30%;
+        height: 70%;
+        border-radius: 900px 900px 0 0;
+    }
+
+    .main-text {
+        justify-content: left;
+    }
+
+    
 }
